@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 250ms;
+}
+
+input.checkbox {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 51px;
+    cursor: pointer;
+}
+
+input.checkbox::before {
+    content: "";
+    position: absolute;
+    width: 51px;
+    height: 31px;
+    background: #e9e9ea;
+    border-radius: 15.5px;
+}
+
+input.checkbox:checked::before {
+    background: #34c759;
+}
+
+input.checkbox::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 27px;
+    width: 27px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: 250ms ease-out;
+}
+
+input.checkbox:checked::after {
+    left: 22px;
+    background-color: #333;
+}
+
+.card {
+    min-height: 300px;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #e9e9ea;
+    color: #000;
+    text-align: justify;
+    font-size: 18px;
+    border-radius: 4px;
+    margin: 0 20px;
+}
+
+/* Dark Mode */
+.darkMode {
+    background-color: #333;
+}
+
+.darkMode .card {
+    background-color: #444;
+    color: #fff;
+}
